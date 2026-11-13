@@ -1,0 +1,131 @@
+
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sammenlign tekst</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef1f5;color:#1d2733;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}.wrap{max-width:1100px;margin:36px auto 60px;padding:0 20px}.window{background:#fff;border:1px solid #c9d0d9;border-radius:12px;box-shadow:0 14px 35px #1f293715;overflow:hidden}.titlebar{height:42px;border-bottom:1px solid #cdd3db;display:grid;grid-template-columns:56px 1fr 72px;align-items:center;text-align:center;background:repeating-linear-gradient(0deg,#fafafa 0 3px,#e8e8e8 3px 4px);font:600 13px "Courier New",monospace;color:#303841}.titlebar b,.dots{background:#f8f8f8;padding:3px 9px}.box{width:15px;height:15px;border:2px solid #555;margin-left:16px;background:#fff}.content{padding:30px 34px 36px}h1{margin:0 0 7px;font-size:30px;letter-spacing:-.02em}h2{margin:0;font-size:21px}p{margin:0 0 26px;color:#667180;line-height:1.55}.inputgrid,.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}.inputgrid{align-items:start}.inputgrid .field{margin-top:0;min-width:0}.field{margin-top:22px}.labelrow{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;padding:8px 10px;border-radius:6px;font-size:14px;font-weight:650}.field-one .labelrow{background:#e7f0ff;border-left:4px solid #6b9ee8}.field-two .labelrow{background:#fff4c7;border-left:4px solid #e0b93e}.labelactions,.fieldtools,.diffnav{display:flex;align-items:center;gap:8px}.fieldtools{margin-top:8px;justify-content:flex-end}.count{color:#697585;font:12px "Courier New",monospace;font-weight:400}.btn{border:1px solid #b8c0ca;border-radius:6px;background:#f8fafc;color:#2c3540;padding:8px 12px;cursor:pointer;font-weight:600;box-shadow:1px 1px 0 #aeb6c0}.btn:hover{background:#eef2f6;border-color:#8f99a5}.btn:active{box-shadow:none;transform:translate(1px,1px)}.btn:disabled{opacity:.45;cursor:default;transform:none;box-shadow:none}.reset-one,.small{padding:5px 9px;font-size:12px}.reset-one{background:#fff9}textarea{width:100%;height:180px;min-height:180px;max-height:360px;resize:vertical;overflow-y:auto;padding:15px;border:1px solid #bbc4cf;border-radius:8px;background:#fff;color:#202833;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}.field-one textarea{border-top-color:#9bbdea}.field-two textarea{border-top-color:#ddc66f}textarea.drag{outline:3px dashed #6b86a5;background:#f5f8fc}textarea:focus{outline:3px solid #dbe7f5;border-color:#6b86a5}.actions{display:flex;justify-content:center;margin:14px 0}.swap{font-family:"Courier New",monospace}.results{margin-top:32px;padding-top:25px;border-top:1px solid #d8dee6}.resulthead{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.resultactions{display:flex;gap:8px;flex-wrap:wrap}.legend{display:flex;gap:18px;margin-top:8px;font-size:13px;color:#687484}.dot{display:inline-block;width:11px;height:11px;border:1px solid #777;border-radius:2px;margin-right:5px;vertical-align:-1px}.blue{background:#cfe1ff}.yellow{background:#ffeb9b}.summary{margin:16px 0;padding:11px 13px;border:1px solid #c8d0d9;border-radius:6px;background:#f1f3f5;color:#39424d;font:13px "Courier New",monospace}.summary.identical{background:#eaf4ff;border-color:#9abfe8;color:#234f7d;font-weight:700}.navrow{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 12px;flex-wrap:wrap}.diffcount{font:12px "Courier New",monospace;color:#657180}.viewhead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}.viewtitle{flex:1;padding:7px 10px;border-radius:5px;font-size:14px;font-weight:650}.grid>div:first-child .viewtitle{background:#e7f0ff;border-left:4px solid #6b9ee8}.grid>div:last-child .viewtitle{background:#fff4c7;border-left:4px solid #e0b93e}.view{min-height:260px;height:auto;padding:16px;border:1px solid #c8d0d9;border-radius:8px;background:#fff;white-space:pre-wrap;overflow:visible;overflow-wrap:anywhere;font-size:15px;line-height:1.7}.removed{background:#cfe1ff;color:#164a8a}.added{background:#ffeb9b;color:#695300}.change{scroll-margin:80px}.activechange{outline:2px solid #1d2733;outline-offset:1px;border-radius:2px}.placeholder{color:#9099a5}.onlydiff .same{display:none}.onlydiff .view{white-space:normal}.onlydiff .change{display:inline-block;margin:2px 6px 2px 0;padding:1px 4px;white-space:pre-wrap}.onlydiff .change::before{content:attr(data-n);margin-right:5px;font:700 10px "Courier New",monospace;opacity:.6}.status{border-top:1px solid #cbd2db;background:#f5f6f8;padding:6px 12px;color:#697480;font:11px "Courier New",monospace;display:flex;justify-content:space-between}@media(max-width:700px){.wrap{margin-top:16px;padding:0 10px}.content{padding:22px 16px}.grid,.inputgrid{grid-template-columns:1fr}.titlebar{grid-template-columns:42px 1fr 52px}.view{min-height:220px;height:auto}}
+</style>
+</head>
+<body>
+<div class="wrap"><section class="window">
+<header class="titlebar"><i class="box"></i><b>Tekstsammenligning</b><span class="dots">□ □ □</span></header>
+<main class="content">
+<h1>Sammenlign tekst</h1>
+<p>Lim inn versjon A (blå) og B (gul) for en tekst under, og forskjeller (inkl space og linebreak) visualiseres nederst.</p>
+<div class="inputgrid">
+<div class="field field-one"><div class="labelrow"><label for="v1">Versjon A · Blå</label><div class="labelactions"><span class="count" id="count1">0 ord</span><button class="btn reset-one" id="clear1" type="button">Nullstill</button></div></div><textarea id="v1" placeholder="Lim inn original tekst her ..."></textarea><div class="fieldtools"><input id="file1" type="file" accept=".txt,text/plain" hidden><button class="btn small" id="load1" type="button">Last inn TXT-fil</button></div></div>
+<div class="field field-two"><div class="labelrow"><label for="v2">Versjon B · Gul</label><div class="labelactions"><span class="count" id="count2">0 ord</span><button class="btn reset-one" id="clear2" type="button">Nullstill</button></div></div><textarea id="v2" placeholder="Lim inn ny versjon her ..."></textarea><div class="fieldtools"><input id="file2" type="file" accept=".txt,text/plain" hidden><button class="btn small" id="load2" type="button">Last inn TXT-fil</button></div></div>
+</div>
+<section class="results" id="results"><div class="resulthead"><div><h2>Forskjeller</h2><div class="legend"><span><span class="dot blue"></span>Versjon A</span><span><span class="dot yellow"></span>Versjon B</span></div></div><div class="resultactions"><button class="btn" id="toggleDiff">Vis kun forskjeller</button><button class="btn" id="clear">Nullstill begge</button></div></div><div class="summary" id="summary">Lim inn tekst i feltene for å sammenligne.</div><div class="navrow"><div class="diffnav"><button class="btn small" id="prev">← Forrige</button><button class="btn small" id="next">Neste →</button><span class="diffcount" id="diffcount">Ingen endringer</span></div></div><div class="grid"><div><div class="viewhead"><div class="viewtitle">Versjon A · Blå</div><button class="btn small" id="copy1">Kopier</button></div><div class="view" id="out1"><span class="placeholder">Resultatet vises her.</span></div></div><div><div class="viewhead"><div class="viewtitle">Versjon B · Gul</div><button class="btn small" id="copy2">Kopier</button></div><div class="view" id="out2"><span class="placeholder">Resultatet vises her.</span></div></div></div></section>
+</main>
+<footer class="status"><span id="status">Klar</span><span>TEXT COMPARE</span></footer>
+</section></div>
+<script>
+const v1=document.getElementById('v1'),v2=document.getElementById('v2'),out1=document.getElementById('out1'),out2=document.getElementById('out2'),summary=document.getElementById('summary'),results=document.getElementById('results'),statusEl=document.getElementById('status');
+function tokenize(t){return t.match(/\s+|[\p{L}\p{N}_]+|[^\s\p{L}\p{N}_]/gu)||[]}
+function space(t){return /^\s+$/.test(t)}
+function words(t){return(t.match(/[\p{L}\p{N}_]+/gu)||[]).length}
+function escSpace(t){return t.replace(/\t/g,'⇥').split(String.fromCharCode(10)).join('↵'+String.fromCharCode(10))}
+function lines(t){return t.match(/[^\n]*\n|[^\n]+/g)||[]}
+const LIMIT=2e7,MAXD=2500;
+// Myers O(ND) for long texts with few edits; returns 0=same/1=removed/2=added per token, or null above MAXD edits
+function myers(a,b,s,n,m){
+	const max=Math.min(n+m,MAXD),off=max,v=new Int32Array(2*max+2),trace=[];
+	for(let d=0;d<=max;d++){
+		trace.push(v.slice(off-d,off+d+1));
+		for(let k=-d;k<=d;k+=2){
+			let x=(k===-d||(k!==d&&v[off+k-1]<v[off+k+1]))?v[off+k+1]:v[off+k-1]+1,y=x-k;
+			while(x<n&&y<m&&a[s+x]===b[s+y]){x++;y++}
+			v[off+k]=x;
+			if(x<n||y<m)continue;
+			const ops=[];
+			for(;d>0;d--){
+				const vv=trace[d],pk=(k===-d||(k!==d&&vv[k-1+d]<vv[k+1+d]))?k+1:k-1,px=vv[pk+d],py=px-pk;
+				while(x>px&&y>py){ops.push(0);x--;y--}
+				ops.push(x===px?2:1);
+				x=px;y=py;k=pk;
+			}
+			while(x-->0)ops.push(0);
+			return ops.reverse();
+		}
+	}
+	return null;
+}
+function lcs(a,b,force){
+	let s=0,ea=a.length,eb=b.length;
+	while(s<ea&&s<eb&&a[s]===b[s])s++;
+	while(ea>s&&eb>s&&a[ea-1]===b[eb-1]){ea--;eb--}
+	const n=ea-s,m=eb-s,w=m+1,big=(n+1)*w>LIMIT,ops=big?myers(a,b,s,n,m):null;
+	if(big&&!ops&&!force)return null;
+	const l=[],r=[];
+	for(let k=0;k<s;k++){l.push([a[k],'same',-1]);r.push([b[k],'same',-1])}
+	let g=-1;
+	if(ops){
+		let i=s,j=s,run=false;
+		for(const o of ops){
+			if(!o){l.push([a[i++],'same',-1]);r.push([b[j++],'same',-1]);run=false;continue}
+			if(!run){g++;run=true}
+			if(o===1)l.push([a[i++],'removed',g]);else r.push([b[j++],'added',g]);
+		}
+	}else if(big){
+		g=0;
+		for(let i=s;i<ea;i++)l.push([a[i],'removed',0]);
+		for(let j=s;j<eb;j++)r.push([b[j],'added',0]);
+	}else{
+		const dp=new Uint16Array((n+1)*w);
+		for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)dp[i*w+j]=a[s+i]===b[s+j]?dp[(i+1)*w+j+1]+1:Math.max(dp[(i+1)*w+j],dp[i*w+j+1]);
+		let i=0,j=0,run=false;
+		while(i<n||j<m){
+			if(i<n&&j<m&&a[s+i]===b[s+j]){l.push([a[s+i],'same',-1]);r.push([b[s+j],'same',-1]);i++;j++;run=false;continue}
+			if(!run){g++;run=true}
+			if(j>=m||(i<n&&dp[(i+1)*w+j]>=dp[i*w+j+1]))l.push([a[s+i++],'removed',g]);else r.push([b[s+j++],'added',g]);
+		}
+	}
+	for(let k=ea;k<a.length;k++){l.push([a[k],'same',-1]);r.push([b[k-ea+eb],'same',-1])}
+	return{l,r,groups:g+1};
+}
+function diff(aText,bText){return lcs(tokenize(aText),tokenize(bText))||Object.assign(lcs(lines(aText),lines(bText),true),{coarse:true})}
+function render(el,pieces,kind){
+	el.textContent='';
+	if(!pieces.length){el.innerHTML='<span class="placeholder">Resultatet vises her.</span>';return}
+	let s=null,buf='',pk,pg;
+	pieces.forEach(([t,k,g])=>{
+		if(!s||k!==pk||g!==pg){
+			if(s)s.textContent=buf;
+			s=document.createElement('span');buf='';pk=k;pg=g;
+			s.className=k==='same'?'same':kind+' change';
+			if(k!=='same'){s.dataset.group=g;s.dataset.n=g+1}
+			el.appendChild(s);
+		}
+		buf+=(k!=='same'&&space(t))?escSpace(t):t;
+	});
+	s.textContent=buf;
+}
+let groups=0,cur=-1,timer;
+const prevBtn=document.getElementById('prev'),nextBtn=document.getElementById('next'),diffcount=document.getElementById('diffcount');
+function go(step){
+	if(!groups)return;
+	cur=cur<0?(step>0?0:groups-1):(cur+step+groups)%groups;
+	document.querySelectorAll('.activechange').forEach(e=>e.classList.remove('activechange'));
+	const hits=document.querySelectorAll('.change[data-group="'+cur+'"]');
+	hits.forEach(e=>e.classList.add('activechange'));
+	if(hits[0])hits[0].scrollIntoView({block:'center',behavior:'smooth'});
+	diffcount.textContent='Endring '+(cur+1)+' av '+groups;
+}
+function hasFiles(e){return[...e.dataTransfer.types].includes('Files')}
+function schedule(){clearTimeout(timer);timer=setTimeout(update,150)}
+function update(){document.getElementById('count1').textContent=words(v1.value)+' ord';document.getElementById('count2').textContent=words(v2.value)+' ord';const d=diff(v1.value,v2.value);render(out1,d.l,'removed');render(out2,d.r,'added');const empty=!v1.value&&!v2.value,identical=!empty&&d.groups===0;summary.classList.toggle('identical',identical);summary.textContent=empty?'Lim inn tekst i feltene for å sammenligne.':identical?'✓ Tekstene er identiske.':d.groups+' endring'+(d.groups===1?'':'er')+' funnet.'+(d.coarse?' Lang tekst: sammenlignet linje for linje.':'');groups=d.groups;cur=-1;prevBtn.disabled=nextBtn.disabled=!groups;diffcount.textContent=groups?groups+' endring'+(groups===1?'':'er'):'Ingen endringer'}
+prevBtn.onclick=()=>go(-1);nextBtn.onclick=()=>go(1);
+document.getElementById('toggleDiff').onclick=e=>{results.classList.toggle('onlydiff');e.currentTarget.textContent=results.classList.contains('onlydiff')?'Vis all tekst':'Vis kun forskjeller'};
+async function copyText(text,button){try{await navigator.clipboard.writeText(text);const old=button.textContent;button.textContent='Kopiert';statusEl.textContent='Kopiert til utklippstavlen';setTimeout(()=>button.textContent=old,1200)}catch{statusEl.textContent='Kunne ikke kopiere'}}
+document.getElementById('copy1').onclick=e=>copyText(v1.value,e.currentTarget);document.getElementById('copy2').onclick=e=>copyText(v2.value,e.currentTarget);
+function loadFile(input,target){const f=input.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{target.value=r.result;update();statusEl.textContent='Lastet inn '+f.name};r.readAsText(f);input.value=''}
+document.getElementById('load1').onclick=()=>document.getElementById('file1').click();document.getElementById('load2').onclick=()=>document.getElementById('file2').click();document.getElementById('file1').onchange=e=>loadFile(e.target,v1);document.getElementById('file2').onchange=e=>loadFile(e.target,v2);
+[[v1,document.getElementById('file1')],[v2,document.getElementById('file2')]].forEach(([area])=>{area.addEventListener('dragover',e=>{if(!hasFiles(e))return;e.preventDefault();area.classList.add('drag')});area.addEventListener('dragleave',()=>area.classList.remove('drag'));area.addEventListener('drop',e=>{if(!hasFiles(e))return;e.preventDefault();area.classList.remove('drag');const f=e.dataTransfer.files[0];if(!f||(!f.name.toLowerCase().endsWith('.txt')&&f.type!=='text/plain')){statusEl.textContent='Bare TXT-filer støttes';return}const r=new FileReader();r.onload=()=>{area.value=r.result;update();statusEl.textContent='Lastet inn '+f.name};r.readAsText(f)})});
+v1.addEventListener('input',schedule);v2.addEventListener('input',schedule);document.getElementById('clear1').onclick=()=>{v1.value='';update();v1.focus()};document.getElementById('clear2').onclick=()=>{v2.value='';update();v2.focus()};document.getElementById('clear').onclick=()=>{v1.value='';v2.value='';update();v1.focus()};update();
+</script>
+</body>
+</html>

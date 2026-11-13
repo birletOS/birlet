@@ -4,4 +4,4 @@ Her deler jeg noen notater med venner.
 
 ## Nyeste
 
-- [Ønskeliste](ønskeliste.md)
+- [Ønskeliste 2026](docs/ønskeliste-birger.html)
